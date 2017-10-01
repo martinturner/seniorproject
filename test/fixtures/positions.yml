@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  period: 2017-10-01
+  speed: 1.5
+  latitude: 1.5
+  longtitude: 1.5
+  imei: MyText
+
+two:
+  period: 2017-10-01
+  speed: 1.5
+  latitude: 1.5
+  longtitude: 1.5
+  imei: MyText

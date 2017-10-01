@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @position.period %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @position.speed %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @position.latitude %>
+</p>
+
+<p>
+  <strong>Longtitude:</strong>
+  <%= @position.longtitude %>
+</p>
+
+<p>
+  <strong>Imei:</strong>
+  <%= @position.imei %>
+</p>
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>
