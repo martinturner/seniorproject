@@ -1,9 +1,22 @@
 # config valid only for current version of Capistrano
 lock "3.9.1"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, 'seniorproject'
+set :repo_url, 'https://github.com/martinturner/seniorproject'
+set :rvm_ruby_version, '2.4.1@seniorproject'
+set :deploy_to, '/home/martinturner/seniorproject'
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+set :keep_releases, 3
 
+namespace :deploy do
+  task :restart do
+  on roles(:app), in: :sequence do
+    execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+  after :publishing, :restart
+end
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
