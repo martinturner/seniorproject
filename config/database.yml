@@ -29,7 +29,7 @@ development:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: senior_development
+  database: senior_database
   host: ''
   username: senior
   password: '123456'
@@ -93,6 +93,6 @@ production:
   timeout: 5000
   encoding: utf8
   host: ''
-  database: senior
+  database: senior_database
   username: senior
   password: '123456'
