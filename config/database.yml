@@ -26,10 +26,13 @@ default: &default
 
 development:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: senior_development
-  # host: localhost
-  # username: senior
-  # password: '123456'
+  host: ''
+  username: senior
+  password: '123456'
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -85,7 +88,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: seniorproject_production
-  username: seniorproject
-  password: <%= ENV['SENIORPROJECT_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+  host: ''
+  database: senior
+  username: senior
+  password: '123456'

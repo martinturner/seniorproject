@@ -1,10 +1,10 @@
 # config valid only for current version of Capistrano
-lock "3.9.1"
+lock "3.8.2"
 
 set :application, 'seniorproject'
-set :repo_url, 'https://github.com/martinturner/seniorproject'
+set :repo_url, 'https://github.com/martinturner/seniorproject.git'
 set :rvm_ruby_version, '2.4.1@seniorproject'
-set :deploy_to, '/home/martinturner/seniorproject'
+set :deploy_to, '/home/martin/seniorproject'
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 set :keep_releases, 3

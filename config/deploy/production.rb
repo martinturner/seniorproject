@@ -1,6 +1,6 @@
-role :app, %w{martin@188.166.212.161:1555}
-role :web, %w{martin@188.166.212.161:1555}
-role :db,  %w{martin@188.166.212.161:1555}
+role :app, %w{martin@188.166.212.161:9999}
+role :web, %w{martin@188.166.212.161:9999}
+role :db,  %w{martin@188.166.212.161:9999}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
